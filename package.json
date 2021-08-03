@@ -2,7 +2,7 @@
   "name": "enumhelper",
   "description": "helper to implement Java Enum by using TypseScript",
   "main": "dist/index.js",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
