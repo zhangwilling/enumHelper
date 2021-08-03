@@ -1,0 +1,9 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "json.schemas": [
+    {
+      "fileMatch": ["/.sxcrc.json"],
+      "url": "https://sxc-item.oss-cn-hangzhou.aliyuncs.com/focus/item/2021-05-19-14-18-25-52455.json"
+    }
+  ]
+}

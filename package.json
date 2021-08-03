@@ -1,0 +1,76 @@
+{
+  "name": "enumhelper",
+  "description": "helper to implement Java Enum by using TypseScript",
+  "main": "dist/index.js",
+  "version": "0.1.0-alpha",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "eslint ./src --ext .js,.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "release": "npm run build && npm publish"
+  },
+  "keywords": [
+    "typescript",
+    "enum"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": "zhangwilling <zhangwilling0316@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:zhangwilling/enumHelper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhangwilling/enumHelper/issues"
+  },
+  "homepage": "https://github.com/zhangwilling/enumHelper",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^23.3.14",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "auto": "^4.15.5",
+    "eslint": "6.3.0",
+    "eslint-config-prettier": "6.2.0",
+    "eslint-plugin-no-explicit-type-exports": "0.10.10",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^1.1.2",
+    "jest": "^24.7.1",
+    "lint-staged": "^7.3.0",
+    "memfs": "^3.1.2",
+    "prettier": "^1.14.3",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.9.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser typescript --write",
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
