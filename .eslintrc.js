@@ -15,6 +15,8 @@ module.exports = {
     // "no-explicit-type-exports/no-explicit-type-exports": 2,
     'no-unused-vars': 1,
     'no-undef': 1,
-    'no-unused-expressions': 1
+    'no-unused-expressions': 1,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error']
   }
 };
