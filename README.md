@@ -1,10 +1,10 @@
-## EnumHelper
+## Info
 
-解决常见的 enum 类型数据的变换形态，这里的 enum 指的是广义的 enum 数据，而不是某个语言的 enum 类型。
+为什么开发这个库见：https://github.com/zhangwilling/Blog/issues/22
 
-TS enum 存在许多问题，比如：无法确定数字值，比如不支持复杂对象。通常我们会写两个枚举，一个是对应的值，即 Record<string, number | string>，一个是对应的文本，即 Record<string, string>。
+一句话解释：解决常见的 enum 的变换形态和类型提示问题。这里的 enum 指的是广义的 enum 数据，而不是某个语言的 enum 类型。
 
-第一, 在 Select 组件的场景里还需要将 2 者合并转成 options 的数组写法。第二，在根据值获取文本时又需要构造一个 KV 结构的对象便于展示时获取。总之，非常繁琐。
+我们最常遇到的枚举转换场景有：1. 在 Select 组件的场景里还需要合并转成 options 的数组写法。2. 在根据值获取文本时又需要构造一个 KV 结构的对象便于展示时获取。这个小工具都解决了，并且类型提示完好。
 
 ### Usage
 
